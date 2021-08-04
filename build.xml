@@ -27,7 +27,6 @@
 	
 	<target name="compile" >
 		<javac srcdir="${source.dir}" destdir="${web.dir}/WEB-INF/classes" classpathref="project_classpath" >
-			
 		</javac>
 		
 		<copy todir="${web.dir}/WEB-INF/classes" >
@@ -50,7 +49,7 @@
 		<antcall target="package" />
 	</target>
 	
-	<target name="exe_deploy" >
+	<target name="exedeploy" >
 	 <ant antfile="deploy.xml" target="deploy"/>
 	</target>
 	
