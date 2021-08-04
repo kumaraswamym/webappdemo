@@ -17,7 +17,7 @@
 	  </tstamp>
 	<target name="delete" >
 		<delete dir="${web.dir}/WEB-INF/classes" />
-<delete dir="${war.dir}" />		
+		<delete dir="${war.dir}" />		
 	</target>
 	
 	<target name="init" >
@@ -38,7 +38,7 @@
 	
 	<target name="package" >
 		<war basedir="${web.dir}" destfile="${war.dir}/webapp.war"/>
-		</target>
+	</target>
 
 	<!-- <target name="all" depends="delete,init,compile_project,package" /> -->
 	
@@ -49,7 +49,7 @@
 		<antcall target="package" />
 	</target>
 	
-	<target name="exedeploy" >
+	<target name="run_deploy" >
 	 <ant antfile="deploy.xml" target="deploy"/>
 	</target>
 	
